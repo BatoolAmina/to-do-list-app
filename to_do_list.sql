@@ -1,0 +1,14 @@
+Use to_do_list;
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+
+CREATE TABLE todos (
+  id int(11) NOT NULL,
+  title text NOT NULL,
+  checked tinyint(1) NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+ALTER TABLE todos
+  ADD PRIMARY KEY (`id`);
+ALTER TABLE todos
+  MODIFY id  int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
+COMMIT;
